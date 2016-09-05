@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learning Shiny</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Learning Shiny">
+  <meta name="author" content="Krishna Prasad">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Learning Shiny</h1>
+    <h2>Learning Shiny from Coursera</h2>
+    <p>Krishna Prasad<br/>Software Engineer</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Introduction of Shiny</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Shiny is a platform for creating interactive Rprograms embedded into a webpage.</li>
+<li><p>Suppose that you create a prediction algorithm, with shiny you can very easily create web input
+form that calls R and thus your prediction algorithm and displays the results.</p></li>
+<li><p>Shiny is made by the fine folk sat RStudio.</p></li>
+<li><p>Shiny doesn&#39;t really require it, but as with all web programming, a little knowledge of html, css and js is very helpful</p></li>
+<li><p>Shiny uses css <a href="getbootstrap.com/css/">bootstrap</a> style, which seems to look nice and renders well on mobile platform.</p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Getting started with Shiny</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Make sure you have the latest release of R installed
+You can check the installed version by following command</li>
+</ul>
+
+<pre><code class="r">paste0(version$major, &#39;.&#39;, version$minor)
+</code></pre>
+
+<pre><code>## [1] &quot;3.3.0&quot;
+</code></pre>
+
+<ul>
+<li>How to install the shiny library in R</li>
+</ul>
+
+<pre><code class="r">install.packages(&quot;shiny&quot;)
+# load as
+library(shiny)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Create A Shiny project</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>A shiny project is a directory containing at least two parts
+
+<ul>
+<li>One named ui.R (for user interface) controls how it works.</li>
+<li>One named server.R that controls what is does</li>
+</ul></li>
+<li>Example of ui.R and server.R</li>
+</ul>
+
+<pre><code class="r">#ui.R
+library(shiny)
+shinyUI(pageWithSidebar(
+  headerPanel(&quot;Data science FTW!&quot;),
+  sidebarPanel(h3(&#39;Sidebar text&#39;)),
+  mainPanel(h3(&#39;Main Panel text&#39;))
+))
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>server.R</h2>
+  </hgroup>
+  <article data-timings="">
+    <h2>How to run it</h2>
+
+<ul>
+<li>In R, change to the directories with these files and type <code>runApp()</code></li>
+<li>or put the path to the directory where ui.R and server.R contains as an arguments in the method <code>runApp()</code></li>
+<li>It should open an browser window with the app running</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Check list and Thank you page</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Your presentation must satisfy the following</p>
+
+<ol>
+<li>It must be done in Slidify or Rstudio Presenter: Yes</li>
+<li>It must be 5 pages: Yes</li>
+<li>It must be hosted on github or Rpubs : Yes, hosted on github pages with url is: <a href="http://krishnaiitd.github.io/learningSlidify">http://krishnaiitd.github.io/learningSlidify</a></li>
+<li>It must contained some embedded R code that gets run when slidifying the document: Yes, it contains slide number 3, with the code <code>paste0(version$major, &#39;.&#39;, version$minor)</code></li>
+</ol>
+
+<h3>Thank you very much for going through slides</h3>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Introduction of Shiny'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Getting started with Shiny'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Create A Shiny project'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='server.R'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Check list and Thank you page'>
+         5
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
